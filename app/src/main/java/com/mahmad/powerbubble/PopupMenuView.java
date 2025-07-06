@@ -85,7 +85,8 @@ public class PopupMenuView extends LinearLayout {
         dismiss(context);
         // Add a full-screen transparent background to catch outside touches
         currentBackground = new View(context);
-        currentBackground.setBackgroundColor(0x33000000); // semi-transparent
+        // Popup background color: darker semi-transparent black
+        currentBackground.setBackgroundColor(0x88000000); // more dark, 0x88 = ~53% opacity
         currentBackground.setOnTouchListener((v, event) -> {
             v.performClick();
             dismiss(context);
