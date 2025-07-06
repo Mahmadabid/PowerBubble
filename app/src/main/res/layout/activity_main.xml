@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <Switch
+        android:id="@+id/switch_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Floating Bubble" />
+
+    <Button
+        android:id="@+id/btn_overlay_perm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Overlay Permission"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_accessibility_perm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Accessibility Permission"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp" />
+
+</LinearLayout>
+
