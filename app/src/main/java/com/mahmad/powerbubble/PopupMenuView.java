@@ -41,7 +41,13 @@ public class PopupMenuView extends LinearLayout {
         lockParams.setMargins(0, margin, 0, margin);
         btnLock.setLayoutParams(lockParams);
         btnLock.setOnClickListener(v -> {
-            BubbleAccessibilityService.lockScreen(context);
+            android.app.admin.DevicePolicyManager dpm = (android.app.admin.DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+            android.content.ComponentName admin = new android.content.ComponentName(context, MyDeviceAdminReceiver.class);
+            if (dpm != null && dpm.isAdminActive(admin)) {
+                dpm.lockNow();
+            } else {
+                android.widget.Toast.makeText(context, "Device admin not enabled. Please enable it in the app settings.", android.widget.Toast.LENGTH_SHORT).show();
+            }
             PopupMenuView.dismiss(context);
         });
         addView(btnLock);
