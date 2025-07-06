@@ -53,16 +53,17 @@ public class BubbleService extends Service {
     private void startForegroundService() {
         String channelId = "bubble_service_channel";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(channelId, "Bubble Service", NotificationManager.IMPORTANCE_LOW);
+            NotificationChannel channel = new NotificationChannel(channelId, "Bubble Service", NotificationManager.IMPORTANCE_MIN);
             NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             manager.createNotificationChannel(channel);
         }
         Notification notification = new NotificationCompat.Builder(this, channelId)
-                .setContentTitle("PowerBubble Running")
-                .setContentText("Floating bubble is active.")
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setPriority(NotificationCompat.PRIORITY_MIN)
+                .setCategory(NotificationCompat.CATEGORY_SERVICE)
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET)
+                .setOngoing(true)
                 .build();
-        // Remove foregroundServiceType requirement for Android 8 and below
         startForeground(1, notification);
     }
 

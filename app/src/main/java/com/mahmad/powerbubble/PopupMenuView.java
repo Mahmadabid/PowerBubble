@@ -115,7 +115,7 @@ public class PopupMenuView extends LinearLayout {
         params.gravity = Gravity.TOP | Gravity.START;
         // Dynamically position the menu to the left or right of the bubble based on anchorParams.x
         int screenWidth = context.getResources().getDisplayMetrics().widthPixels;
-        int menuWidth = 400; // Approximate width in px, adjust as needed
+        int menuWidth = 150; // Approximate width in px, adjust as needed
         int screenHeight = context.getResources().getDisplayMetrics().heightPixels;
         int menuHeight = 400; // Approximate height in px, adjust as needed
         // X positioning (left/right)
