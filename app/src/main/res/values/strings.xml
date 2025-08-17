@@ -1,7 +1,8 @@
 <resources>
+    <string name="app_name">PowerBubble</string>
+    <string name="app_description">A lightweight floating bubble app that provides quick access to essential power controls and system actions. Tap the floating bubble for instant screen lock, volume control, and power menu access.</string>
     <string name="accessibility_service_description">PowerBubble accessibility service for screen lock and power menu actions.</string>
     <string name="volume">Volume</string>
-    <string name="app_name">PowerBubble</string>
     <string name="lock_screen">🔒  Turn Off Screen</string>
     <string name="change_volume">🔊  Change Volume</string>
     <string name="power_off_features">⏻  Power Off Features</string>
